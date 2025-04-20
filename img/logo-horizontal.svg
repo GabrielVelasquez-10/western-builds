@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 237 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-82.0189,-342)">
+        <g transform="matrix(0.266964,0,0,0.266964,70.2633,285.678)">
+            <g transform="matrix(75.2899,0,0,75.2899,930.53,324.31)">
+            </g>
+            <text x="277.692px" y="324.31px" style="font-family:'Poppins-Black', 'Poppins';font-weight:900;font-size:75.29px;">WESTERN BUILDS</text>
+        </g>
+        <g transform="matrix(0.583869,0,0,0.583869,-114.631,257.031)">
+            <g transform="matrix(1,0,0,1,-2,-0.5)">
+                <path d="M402.968,216.826L404.954,216.826L417.151,163.521L399.156,163.521L394.338,197.1L387.11,163.521L372.762,163.521L362.849,146.028L410.849,146.028L434.684,188.612L411,231L402.968,216.826Z"/>
+            </g>
+            <g transform="matrix(-1.0906,0,0,-1.0906,799.617,387.93)">
+                <g transform="matrix(-1.57043,-0,-0,-1.57043,424.363,222.263)">
+                    <use xlink:href="#_Image1" x="0" y="10" width="36px" height="32px"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <image id="_Image1" width="36px" height="32px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACVUlEQVRYha2XzUsVURiHn2tpWUFJVBp9IHWD3Ogqq02t3FiEC2nTok0gFCEStIloEQki2H/QJtKNCC4qEKRNQt1c1aoyFCNEkcAiEtNxMXPoeDwf75y5P7jcmXk/zsN7PuadEjAOHCGsUWDAYbsMvBHkEGkMSAS/V54cL4HWagHdEwJ9dcSXgGVgslpAF4RA/4BaS3xZ87lWDaBdwF8hVNkSf0Ozf3ZAi1UDrAIfhP42oHbDfqcoEMBUlYAAHgIHiwK9FfqfNu53A23GswPAo1ggpUPI1tBrI861IdaAszEgqkJLwBeBvzll5nQp7QQGY4B0PSNcoXWgTosZDvh3FAG6JQBKgDNazLeA7ydgRyxQixCoM/OXrrueWKAa4KdggN7M/0rAby37XwT254FQ2kB2Hqmtfz7gNwmskFbyQQwQyM4jtdNcO0zpPTCdXd8FTsUASSpUzuLOBfwq/H8l1eHupbzaQ/pWD2391oBPAhwFuo1nl2KgKoLB+gP2H1muZuP5NNtnJainAqC5gH08y6WaN9120ze4jVayjk4E7GrtJGxvbZ4Ae/MASd/8PlW0axOoCbifN+EsslPY9Tus5eqy2P8Ax/MAvSgAM2fkOubwe54H6HYBoFEjVwlYsPhtYDnLXFtQ2tLaVDHubQsbUtAhKdBH4HckkG1w10fEReC6NPEEcVPWYMnl6wxmSXtzwH9qxkzbDGkLY8r3mXUS6JMk7yB/dUY8+eY9cb+ARvBX6F3mnEfmgtblq9I+4DGkK92nq0B9DqAp4LvD1sbWftxUAkxsApHLZask4sGtAAAAAElFTkSuQmCC"/>
+    </defs>
+</svg>

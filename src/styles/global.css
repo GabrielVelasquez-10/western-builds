@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/fonts/Poppins-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;  /* Define the font style (e.g., normal, jjktalic) */
+  font-display: swap; /* Optional: Controls how the font is displayed while loading */
+}
+
+body {
+  font-family: "Poppins";
+  background-color: #ff8;
+}

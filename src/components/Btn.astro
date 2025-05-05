@@ -1,0 +1,54 @@
+---
+const {content} = Astro.props
+---
+
+<button class="btn">
+  <span class="btn-text-one">{content}</span>
+  <span class="btn-text-two">{content}</span>
+</button>
+
+<style>
+.btn {
+  width: 120px;
+  height: 40px;
+  color: #000;
+  background: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn span {
+  font-size: 1rem;
+  font-family: "Poppins";
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: top 0.3s;
+}
+
+.btn-text-one {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn-text-two {
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn:hover .btn-text-one {
+  top: -100%;
+}
+
+.btn:hover .btn-text-two {
+  top: 50%;
+}
+</style>

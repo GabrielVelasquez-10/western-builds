@@ -1,0 +1,22 @@
+---
+import LogoIsotipo from '../assets/svg/isotipo.svg'
+import LogoFull from '../assets/svg/logoFull.svg'
+
+const {isotipo} = Astro.props;
+const {classId} = Astro.props;
+---
+<>
+{isotipo ? <LogoIsotipo class="logo"/> : <LogoFull class="logoFull"/>}
+</>
+
+<style>
+  .logoFull {
+    width: 10rem;
+  }
+  .logo {
+    color: white; 
+    width: 2.5rem;
+  }
+
+</style>
+

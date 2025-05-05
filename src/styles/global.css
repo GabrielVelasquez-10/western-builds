@@ -1,22 +1,42 @@
-<<<<<<< HEAD
 @font-face {
   font-family: "Poppins";
-  src: url("../../public/fonts/Poppins-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;  /* Define the font style (e.g., normal, jjktalic) */
+  src: url("../../public/fonts/poppins-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: SemiBold; /* Define the font style (e.g., normal, jjktalic) */
   font-display: swap; /* Optional: Controls how the font is displayed while loading */
 }
-=======
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
->>>>>>> 69e4160c847bf93057b9dff218fdb1a6fcb34c2f
 
-body {
+@font-face {
   font-family: "Poppins";
-  background-image: url('./../../public/img/wood-construction-house.jpg');
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(6.3px);
--webkit-backdrop-filter: blur(6.3px);
-border: 1px solid rgba(93, 93, 93, 0.3);
+  src: url("../../public/fonts/poppins-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: Bold; /* Define the font style (e.g., normal, jjktalic) */
+  font-display: swap; /* Optional: Controls how the font is displayed while loading */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 10;
+}
 
+body {
+  width: 100%;
+  font-family: "Poppins";
+  overflow-x: hidden;
+}
+body:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  z-index: 1;
+}
+
+.wrapper {
+  padding: 1rem 2rem;
+}

@@ -1,30 +1,148 @@
 ---
-import Logo from '../assets/svg/isotipo.svg';
+import IconMenu from '../assets/svg/icons/iconMenu.svg';
+import Btn from '../components/Btn.astro';
+import NavBtn from '../components/NavBtn.astro'
+import Logo from '../components/Logo.astro';
+
+const {sidebar} = Astro.props;
 ---
 
-<header>
+<script>
+  
+    const buttonMenu = document.getElementById("menuButton");
+    const sidebar = document.getElementById("sidebar");
+    const navbar = document.getElementById("navbar")
+    const toggleClass = 'sidebar-hide';
+    const umbralScroll = 110;
 
-  <div class="div">
-    
-  </div>
-  <Logo class="logo"/>
+    console.log(buttonMenu)
 
-</header>
+    const actualizarClase = (activar) => {
+      sidebar.classList.toggle(toggleClass, activar);
+    };
+
+    buttonMenu.addEventListener('click', () => {
+      actualizarClase(!sidebar.classList.contains(toggleClass));
+      console.log(sidebar.classList)
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY <= umbralScroll) {
+        if (!sidebar.classList.contains(toggleClass)) sidebar.classList.add(toggleClass);
+        if (!navbar.classList.contains("navbar-active")) navbar.classList.add("navbar-active");
+      }
+
+      if (window.scrollY == 0 || window.scrollY < 45) navbar.classList.remove("navbar-active");
+    });
+
+</script>
+
+  <header sisebar={true} class="header">
+
+    <div class="navBar" id="navbar">
+      <Logo isotipo={false}/>
+
+      <nav class="navBar-items">
+        <NavBtn content="INICIO"/>
+        <NavBtn content="SEVICIOS"/>
+        <NavBtn content="PROYECTOS"/>
+        <NavBtn content="SOBRE NOSOTROS"/> 
+        <NavBtn content="CONTACTO"/>
+      </nav>
+    </div>
+
+    <div class="navSideBar">
+
+      <div class="navSideBar-bar">
+        <div class="spacing"></div>
+        <Logo isotipo={true}/>
+        <button class="menuButton" id="menuButton"><IconMenu class='menuIcon'/></button>
+      </div>
+
+      <nav class="sidebar sidebar-hide" id="sidebar">
+        <NavBtn class="sidebar-link" content="INICIO"/>
+        <NavBtn class="sidebar-link" content="SEVICIOS"/>
+        <NavBtn class="sidebar-link" content="PROYECTOS"/>
+        <NavBtn class="sidebar-link" content="SOBRE NOSOTROS"/> 
+        <NavBtn class="sidebar-link" content="CONTACTO"/>
+      </nav>
+
+    </div>
+    laksf;lkasaksjflkasdflkj
+  </header>
 
 <style>
-  header {
+  :root {
+    --sidebar-width: 23rem;
+  }
+
+  .header {
+    width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .logo {
-    margin-top: 30rem;
-    width: 3rem;
-    color: #37423d;
+  .navBar {
+    width: 95%;
+    height: 3.8rem;
+    background: #000;
+    position: fixed;
+    z-index: 2000;
+    transition: transform ease .3s;
+    transform: translateY(-10rem); /* mover header negro*/
+    margin-top: 1rem;
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }.navbar-active {
+    transform: translateY(0); /* mover header negro*/
+
+  }
+  .navBar-items {
+    height: 1rem;
   }
 
-  * {
-    font-family: "Poppins";
+  .navSideBar {
+    width: 100%;
+  }
+
+  .navSideBar-bar {
+    width: 100%;
+    padding: 0 1.3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menuButton {
+    position: relative;
+    z-index: 1000;
+    background: none;
+    color: #fff;
+    border: none;
+  }.menuButton:hover {
+    cursor: pointer;
+  }
+  .menuIcon {
+    width: 2rem;
+  }
+
+  .sidebar {
+    background: #000;
+    right: 0;
+    top: 0;
+    width: var(--sidebar-width);
+    height: 100%;
+    transition: transform ease .34s;
+    transform: translateX(0);
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+  }.sidebar-hide {
+    transform: translateX(var(--sidebar-width));
   }
 
 </style>

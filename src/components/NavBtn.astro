@@ -1,6 +1,6 @@
 ---
 const {content} = Astro.props
-const {fontSize} = Astro.props
+const {noStyle} = Astro.props
 ---
 
 <script>
@@ -10,17 +10,13 @@ const {fontSize} = Astro.props
   
   elementWord.forEach(item => {
     let lengthWord = item.textContent.length;
-    let fonts = item.getAttribute('fontSize');
-    console.log(fonts);
-
-    item.style.width = `${lengthWord * 4}px`;
+    let styleFlag = item.getAttribute('noStyle');
+    if (styleFlag && item) item.style.width = `${lengthWord * 4}px`;
   });
-
-  console.log(elementWord);
 
 </script>
 
-<button class="btn" id="btn">
+<button class="btn" id="btn" noStyle={false}>
   <span class="btn-text-one">{content}</span>
   <span class="btn-text-two">{content}</span>
 </button>

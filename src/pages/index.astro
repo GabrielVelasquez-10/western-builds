@@ -1,30 +1,281 @@
 ---
 import '../styles/global.css'
 
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Btn from '../components/Btn.astro';
+import Footer from '../components/Footer.astro'
+
+
 
 ---
 
 <Layout>
   <section class="head">
     <Header sidebar={false}/>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <Hero/>
+  </section>
+
+  <section class="services">
+    <h2>Nuestros Servicios</h2>
+    <div class="service-design">
+      <h3>diseño y planificación</h3>
+      <p>Planos interiores y exteriores / Control de costos y plazos / Coordinación de equipos. </p>
+    </div>
+    <div class="service-remodeling">
+      <h3>Remodelación y renovación</h3>
+      <p>modificaciones estructurales / interiores y exteriores / espacios interiores y exteriores.</p>
+    </div>
+    <div class="service-construction">
+      <h3>construcción integral</h3>
+      <p>Viviendas a medida / Estructuras / Oficinas / Locales / Canchas Deportivas / Movimiento de Tierra / Bodegas.</p>
+    </div>
+
+    <div class="service-installation">
+      <h3>Instalaciones</h3>
+      <p>paneles solares fotovoltaicos / iluminación interior y exterior</p>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>proyectos</h2>
+    <div class="projects-wrapper">
+    <div class="project-item">
+      <div class="img">
+        <img src="" alt="">
+      </div>
+      <h3>public space</h3>
+      <p>hospitals/Clinics museums administration</p>
+    </div>
+    <div class="project-item">
+      <div class="img">
+        <img src="" alt="">
+      </div>
+      <h3>public space</h3>
+      <p>hospitals/Clinics museums administration</p>
+    </div>
+    
+<div class="project-item">
+      <div class="img">
+        <img src="" alt="">
+      </div>
+      <h3>public space</h3>
+      <p>hospitals/Clinics museums administration</p>
+    </div>
+    </div>
 
   </section>
+
+
+  <section class="aboutus">
+     <article>
+      <h2>Sobre Nosotros</h2>
+      <p>En WESTERN BUILDS, la vasta experiencia de nuestros ingenieros, con más de tres décadas en obras civiles, fundamenta nuestra solidez. Su profundo conocimiento abarca desde la planificación de infraestructuras vitales hasta la edificación de espacios diversos, garantizando soluciones eficientes y de alta calidad.</p>
+      <div class="wrapper">
+        <div class="exp"><span class="big">+30</span><span class="text">Años de experiencia</span></div>
+        <div class="length"><span class="big">5 000m²</span><span class="text">Construidos en total</span></div>
+      </div>
+     </article>
+  </section>
+
+  <section class="contact">
+    <h3>listos para empezar?</h3>
+    <p>Todo proyecto se empieza con una conversacion.</p>
+    <Btn to="mailto:gabrielvelasquez102@gmail.com" content="cotizar"/>
+  </section>
+
+  <Footer/>
 </Layout>
 
 <style>
 
+  :root {
+    --color-filter-hero: hsla(0, 0%, 0%, 0.5);
+    --color-filter-cards: rgba(0, 0, 0, 0.596);
+    --filter-cards: linear-gradient(var(--color-filter-cards), var(--color-filter-cards));
+    --filter-hero: linear-gradient(var(--color-filter-hero), var(--color-filter-hero));
+  }
+
   .head {
     width: 100%;
     height: 100vh;
-    background: url("../../public/img/wood-construction.jpg");
+    background: var(--filter-hero), url("../../public/img/wood-construction.jpg");
     background-size: 110%;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: auto;
+  }
+
+
+  .services {
+    width: 100%;
+    height: 35rem;
+    padding: 3rem 3rem;
+    background: #ffffff;
+
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: .5fr repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    place-items: center;
+
+  }
+
+  .services > h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    grid-column: 1 / -1;
+    align-self: self-start;
+    justify-self: start;
+  }
+
+  .services div {
+    color:rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+    padding: 1.5rem;
+    background: #ffffff;
+    border: solid 3px #e9e9e9;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .services h3 {
+    text-transform: uppercase;
+    font-size: 150%;
+  }
+  .services p {
+    text-transform: capitalize;
+    font-size: .77rem;
+    font-style: SemiBold;
+  }
+  .services .service-remodeling {
+    grid-column: 2 / -1;
+  }
+  .services .service-design {
+    grid-column: 1 / 2;
+  }
+  .services .service-installation {
+    grid-column: 3 / -1;
+  }
+  .services .service-construction {
+    grid-column: 1 / 3;
+  }
+
+
+  .projects {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+
+    padding: 3rem;
+  }
+  .projects > h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+  .projects-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .projects-wrapper .project-item {
+    width: 32%;
+    height: 20rem;
+  }
+  .projects-wrapper .project-item .img {
+    width: 100%;
+    height: 75%;
+    background: #7a7a7a;
+  }
+
+  .projects-wrapper .project-item h3 {
+    text-transform: uppercase;
+    margin-top: .4rem;
+    font-size: 1.2rem;
+  }
+
+  .projects-wrapper .project-item p {
+    color: #7a7a7a;
+  }
+
+  .aboutus {
+    width: 100%;
+    height: 35rem;
+    background-image: url('../../public/img/Las_Galias-22 1.jpg');
+    padding: 2.3rem 3rem;
+    display: flex;
+    justify-content: end;
+  }
+  .aboutus article {
+    width: 40%;
+    height: auto;
+    background: white;
+    padding: 2rem 1.4rem;
+  }
+  .aboutus article h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .aboutus article p {
+    color: #7a7a7a;
+  }
+
+.aboutus article .wrapper {
+  width: 100%;
+  display: flex;
+  gap: .8rem;
+  margin-top: 10%;
+}
+
+.aboutus article .wrapper div {
+  flex-grow: 1;
+  border: solid #e9e9e9;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.aboutus article .wrapper div span.big {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.aboutus article .wrapper .exp span.big {
+  font-size: 2.5rem;
+}
+
+.aboutus article .wrapper div span.text {
+  color: #7a7a7a;
+}
+
+
+
+  .contact {
+    height: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  .contact p {
+    color: #7a7a7a;
+    margin-bottom: 1rem;
   }
 
 </style>

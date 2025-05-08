@@ -2,6 +2,7 @@
 import IconMenu from '../assets/svg/icons/iconMenu.svg';
 import Btn from '../components/Btn.astro';
 import NavBtn from '../components/NavBtn.astro'
+import SideBtn from '../components/SideBtn.astro'
 import Logo from '../components/Logo.astro';
 
 const {sidebar} = Astro.props;
@@ -13,7 +14,7 @@ const {sidebar} = Astro.props;
     const sidebar = document.getElementById("sidebar");
     const navbar = document.getElementById("navbar")
     const toggleClass = 'sidebar-hide';
-    const umbralScroll = 110;
+    const umbralScroll = 60;
 
     console.log(buttonMenu)
 
@@ -23,11 +24,10 @@ const {sidebar} = Astro.props;
 
     buttonMenu.addEventListener('click', () => {
       actualizarClase(!sidebar.classList.contains(toggleClass));
-      console.log(sidebar.classList)
     });
 
     window.addEventListener('scroll', () => {
-      if (window.scrollY <= umbralScroll) {
+      if (window.scrollY > umbralScroll) {
         if (!sidebar.classList.contains(toggleClass)) sidebar.classList.add(toggleClass);
         if (!navbar.classList.contains("navbar-active")) navbar.classList.add("navbar-active");
       }
@@ -37,14 +37,14 @@ const {sidebar} = Astro.props;
 
 </script>
 
-  <header sisebar={true} class="header">
+  <header class="header">
 
     <div class="navBar" id="navbar">
       <Logo isotipo={false}/>
 
       <nav class="navBar-items">
         <NavBtn content="INICIO"/>
-        <NavBtn content="SEVICIOS"/>
+        <NavBtn content="SERVICIOS"/>
         <NavBtn content="PROYECTOS"/>
         <NavBtn content="SOBRE NOSOTROS"/> 
         <NavBtn content="CONTACTO"/>
@@ -60,15 +60,14 @@ const {sidebar} = Astro.props;
       </div>
 
       <nav class="sidebar sidebar-hide" id="sidebar">
-        <NavBtn class="sidebar-link" content="INICIO"/>
-        <NavBtn class="sidebar-link" content="SEVICIOS"/>
-        <NavBtn class="sidebar-link" content="PROYECTOS"/>
-        <NavBtn class="sidebar-link" content="SOBRE NOSOTROS"/> 
-        <NavBtn class="sidebar-link" content="CONTACTO"/>
+        <SideBtn class="sidebar-link" content="INICIO"/>
+        <SideBtn class="sidebar-link" content="SERVICIOS"/>
+        <SideBtn class="sidebar-link" content="PROYECTOS"/>
+        <SideBtn class="sidebar-link" content="SOBRE NOSOTROS"/> 
+        <SideBtn class="sidebar-link" content="CONTACTO"/>
       </nav>
 
     </div>
-    laksf;lkasaksjflkasdflkj
   </header>
 
 <style>
@@ -118,7 +117,7 @@ const {sidebar} = Astro.props;
   }
   .menuButton {
     position: relative;
-    z-index: 1000;
+    z-index: 5000;
     background: none;
     color: #fff;
     border: none;
@@ -138,13 +137,15 @@ const {sidebar} = Astro.props;
     transition: transform ease .34s;
     transform: translateX(0);
     position: fixed;
+    z-index: 2000;
+    padding-top: 4rem;
+    padding-left: 1rem;
 
     display: flex;
     flex-direction: column;
   }.sidebar-hide {
     transform: translateX(var(--sidebar-width));
   }
-
 </style>
 
 

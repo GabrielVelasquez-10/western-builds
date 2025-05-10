@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import '../styles/global.css'
 ---
 
 <!doctype html>
@@ -7,9 +8,17 @@ import Header from '../components/Header.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<title>Western Builds - Diseño y Construcción de Espacios Impresionantes</title>
+		
+		<link rel="icon" type="image/svg+xml" href="../../public/favicons/favicon-theme-light.svg" media="(prefers-color-scheme: light)" sizes="any">
+		<link rel="icon" type="image/svg+xml" href="../../public/favicons/favicon-theme-dark.svg" media="(prefers-color-scheme: dark)" sizes="any">
+
+		<meta name="description" content="En Western Builds Materializamos tus proyectos: construcción, diseño de planos, remodelaciones, instalaciones de energía solar e iluminación. ¡Descubre nuestros servicios!">
+
+		<meta name="keywords" content="Western Builds, construcción Santiago, construcción Chile, diseño casas Santiago, diseño 3D, remodelación Santiago, remodelación casas, instalación paneles solares Santiago, energía solar Chile, construcción canchas deportivas, planos construcción, control de costos construcción, planificación proyectos construcción, modificaciones estructurales, construcción oficinas, construcción locales, movimiento de tierra, bodegas, iluminación interior, iluminación exterior, western construcción, western paneles solares">
+
 	</head>
 	<body>
 		<slot />

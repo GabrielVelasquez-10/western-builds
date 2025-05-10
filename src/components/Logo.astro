@@ -6,17 +6,20 @@ const {isotipo} = Astro.props;
 const {classId} = Astro.props;
 ---
 <>
-{isotipo ? <LogoIsotipo class="logo"/> : <LogoFull class="logoFull"/>}
+
+<a href="#">
+{isotipo ? <LogoIsotipo  class="logo"/> : <LogoFull class="logoFull"/>}
+<a/>
+
 </>
 
 <style>
-  .logoFull {
-    width: 10rem;
+  a {
+    display: flex;
+    align-items: center;
   }
-  .logo {
-    color: white; 
-    width: 2.5rem;
+  a > svg {
+    color: white !important;
   }
-
 </style>
 

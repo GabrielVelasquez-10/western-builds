@@ -17,7 +17,7 @@ import Footer from '../components/Footer.astro'
     <Hero/>
   </section>
 
-  <section class="services">
+<section class="services">
     <h2>Nuestros Servicios</h2>
     <div class="service-design">
       <h3>diseño y planificación</h3>
@@ -101,7 +101,7 @@ import Footer from '../components/Footer.astro'
     width: 100%;
     height: 100vh;
     background: var(--filter-hero), url("../../public/img/wood-construction.jpg");
-    background-size: 110%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: auto;
@@ -110,9 +110,11 @@ import Footer from '../components/Footer.astro'
 
   .services {
     width: 100%;
-    height: 35rem;
+    height: auto;
     padding: 3rem 3rem;
     background: #ffffff;
+    position: relative;
+    z-index: 3;
 
 
     display: grid;
@@ -121,7 +123,6 @@ import Footer from '../components/Footer.astro'
     gap: 1rem;
     justify-content: center;
     place-items: center;
-
   }
 
   .services > h2 {
@@ -130,6 +131,7 @@ import Footer from '../components/Footer.astro'
     grid-column: 1 / -1;
     align-self: self-start;
     justify-self: start;
+    flex-grow: 1;
   }
 
   .services div {
@@ -143,15 +145,19 @@ import Footer from '../components/Footer.astro'
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    flex-wrap: wrap;
+
   }
   .services h3 {
     text-transform: uppercase;
     font-size: 150%;
+    margin-bottom: 1.5rem;
   }
   .services p {
     text-transform: capitalize;
     font-size: .77rem;
     font-style: SemiBold;
+
   }
   .services .service-remodeling {
     grid-column: 2 / -1;
@@ -172,23 +178,34 @@ import Footer from '../components/Footer.astro'
     height: auto;
     margin-bottom: 2rem;
 
+    position: relative;
+    z-index: 3;
+
     padding: 3rem;
   }
   .projects > h2 {
     font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: 3rem;
+
   }
   .projects-wrapper{
-    width: 100%;
+    width: auto;
     height: 100%;
     display: flex;
     justify-content: space-between;
+
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .projects-wrapper .project-item {
     width: 32%;
+    min-width: 17rem;
     height: 20rem;
+
+    flex-grow: 1;
   }
   .projects-wrapper .project-item .img {
     width: 100%;
@@ -208,11 +225,14 @@ import Footer from '../components/Footer.astro'
 
   .aboutus {
     width: 100%;
-    height: 35rem;
+    height: auto;
+    position: relative;
+    z-index: 3;
     background-image: url('../../public/img/Las_Galias-22 1.jpg');
     padding: 2.3rem 3rem;
     display: flex;
     justify-content: end;
+    flex-wrap: wrap;
   }
   .aboutus article {
     width: 40%;
@@ -232,6 +252,7 @@ import Footer from '../components/Footer.astro'
 .aboutus article .wrapper {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: .8rem;
   margin-top: 10%;
 }
@@ -245,9 +266,10 @@ import Footer from '../components/Footer.astro'
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  flex-wrap: wrap;
 }
 .aboutus article .wrapper div span.big {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 900;
 }
 
@@ -257,13 +279,18 @@ import Footer from '../components/Footer.astro'
 
 .aboutus article .wrapper div span.text {
   color: #7a7a7a;
+  font-size: auto;
 }
 
 
 
   .contact {
-    height: 20rem;
+    position: relative;
+    z-index: 3;
 
+    min-height: 20rem; 
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,5 +304,86 @@ import Footer from '../components/Footer.astro'
     color: #7a7a7a;
     margin-bottom: 1rem;
   }
+
+  @media only screen and (max-width: 680px) {
+    .services {
+      display: grid;
+      font-size: 1rem;
+      padding: 1.5rem;
+    }
+    .services > h2 {
+      margin-top: 2rem;
+      font-size: 7vw;
+    }
+    .services > div {
+      width: 100%;
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+    .services > div h3 {
+      font-size: 5vw;
+      margin-bottom: 1.7rem;
+      text-align: center;
+    }
+    .services > div p {
+      font-size: 4vw;
+    }
+  .services .service-remodeling {
+    grid-column: 1 / -1;
+  }
+  .services .service-design {
+    grid-column: 1 / -1;
+  }
+  .services .service-installation {
+    grid-column: 1 / -1;
+  }
+  .services .service-construction {
+    grid-column: 1 / -1;
+  }
+
+  .projects {
+    padding: 1.5rem;
+  }
+  .projects > h2 {
+    font-size: 7vw;
+  }
+   .projects-wrapper .project-item p {
+    font-size: 4vw;
+  }
+
+  .aboutus {
+    padding: 2rem .5rem;
+    justify-content: center;
+  }
+
+  .contact h3 {
+    font-size: 7.5vw;
+  }
+  .contact p {
+    font-size: 4.5vw;
+    text-align: center;
+  }
+
+  }
+
+@media only screen and (max-width: 1200px) {
+  .aboutus article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .aboutus article {
+    width: 70%;
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+  .aboutus article {
+    width: 98%;
+  }
+}
+
 
 </style>

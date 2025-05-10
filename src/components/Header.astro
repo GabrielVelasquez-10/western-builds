@@ -11,6 +11,8 @@ const {sidebar} = Astro.props;
 <script>
   
     const buttonMenu = document.getElementById("menuButton");
+    const buttonMenuBar = document.getElementById("menuButtonBar");
+
     const sidebar = document.getElementById("sidebar");
     const navbar = document.getElementById("navbar")
     const toggleClass = 'sidebar-hide';
@@ -23,6 +25,10 @@ const {sidebar} = Astro.props;
     };
 
     buttonMenu.addEventListener('click', () => {
+      actualizarClase(!sidebar.classList.contains(toggleClass));
+    });
+
+    buttonMenuBar.addEventListener('click', () => {
       actualizarClase(!sidebar.classList.contains(toggleClass));
     });
 
@@ -49,13 +55,18 @@ const {sidebar} = Astro.props;
         <NavBtn content="SOBRE NOSOTROS"/> 
         <NavBtn content="CONTACTO"/>
       </nav>
+      <button class="menuButton menuButtonBar" id="menuButtonBar"><IconMenu style="width: 1.5rem;" class='menuIcon'/></button>
     </div>
 
     <div class="navSideBar">
 
       <div class="navSideBar-bar">
         <div class="spacing"></div>
+
+        <div class="logo-wrapper">
         <Logo isotipo={true}/>
+        </div>
+
         <button class="menuButton" id="menuButton"><IconMenu class='menuIcon'/></button>
       </div>
 
@@ -97,14 +108,15 @@ const {sidebar} = Astro.props;
     justify-content: space-between;
   }.navbar-active {
     transform: translateY(0); /* mover header negro*/
-
   }
-  .navBar-items {
-    height: 1rem;
+  .navBar-items {    height: 1rem;
   }
 
   .navSideBar {
     width: 100%;
+  }
+  .spacing {
+    width: 3rem;
   }
 
   .navSideBar-bar {
@@ -116,6 +128,7 @@ const {sidebar} = Astro.props;
     align-items: center;
   }
   .menuButton {
+    width: 2rem;
     position: relative;
     z-index: 5000;
     background: none;
@@ -124,6 +137,10 @@ const {sidebar} = Astro.props;
   }.menuButton:hover {
     cursor: pointer;
   }
+
+    .menuButtonBar {
+      display: none;
+    }
   .menuIcon {
     width: 2rem;
   }
@@ -138,7 +155,7 @@ const {sidebar} = Astro.props;
     transform: translateX(0);
     position: fixed;
     z-index: 2000;
-    padding-top: 4rem;
+    padding-top: 5rem;
     padding-left: 1rem;
 
     display: flex;
@@ -146,6 +163,16 @@ const {sidebar} = Astro.props;
   }.sidebar-hide {
     transform: translateX(var(--sidebar-width));
   }
+
+  @media only screen and (max-width: 770px) {
+    .navBar-items {
+      display: none;
+    }
+    .menuButtonBar {
+      display: block;
+      position: static;
+    }
+}
 </style>
 
 

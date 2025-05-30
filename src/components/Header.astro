@@ -84,6 +84,12 @@ const {sidebar} = Astro.props;
 <style>
   :root {
     --sidebar-width: 23rem;
+    
+    /* --color-main: #001156; */
+    /* --color-main: #40474d; */
+    /* --color-main: #032222; */
+    /* --color-main: #0c2d55; */
+    --color-main: #051830;
   }
 
   .header {
@@ -95,7 +101,7 @@ const {sidebar} = Astro.props;
   .navBar {
     width: 95%;
     height: 3.8rem;
-    background: #000;
+    background: var(--color-main);
     position: fixed;
     z-index: 2000;
     transition: transform ease .3s;
@@ -146,7 +152,7 @@ const {sidebar} = Astro.props;
   }
 
   .sidebar {
-    background: #000;
+    background: var(--color-main);
     right: 0;
     top: 0;
     width: var(--sidebar-width);
@@ -171,6 +177,13 @@ const {sidebar} = Astro.props;
     .menuButtonBar {
       display: block;
       position: static;
+      user-select: none;
+    }
+
+    .sidebar {
+      width: 100%;
+    }.sidebar-hide {
+      transform: translateX(100%);
     }
 }
 </style>

@@ -1,0 +1,70 @@
+---
+interface Props {
+  width?: number; // Por ejemplo: "100px", "50%", "10rem"
+  to?: string;  // Por ejemplo: "100px", "auto", "20vh"
+  content?: string; // Opcional: para darle un color y sea más visual
+}
+
+const { 
+  width = 180, // Ancho por defecto
+  to = '#', // Color por defecto
+  content = 'Btn ejemplo' // Texto por defecto
+} = Astro.props;
+---
+
+<a href={to} class={`btn`} style={{ 
+    // Aquí definimos las variables CSS usando las props
+    '--width-btn': width + "px",
+    '--height-btn': width/3 + "px",
+    '--font-size': (width*0.1155) + "px"
+  }}>
+  <span class="btn-text-one">{content}</span>
+  <span class="btn-text-two">{content}</span>
+</a>
+
+<style>
+.btn {
+  width: var(--width-btn);
+  height: var(--height-btn);
+  color: #ffffff;
+  background: #040404;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+}
+
+.btn span {
+  font-size: var(--font-size);
+  font-family: "Poppins";
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: top 0.3s;
+}
+
+.btn-text-one {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn-text-two {
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn:hover .btn-text-one {
+  top: -100%;
+}
+
+.btn:hover .btn-text-two {
+  top: 50%;
+}
+</style>

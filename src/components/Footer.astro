@@ -1,5 +1,5 @@
 ---
-import Logo from "./Logo.astro"
+// import Logo from "../assets/logo/LogoHorizontal.astro"
 
 import IconInstagram from '../assets/svg/icons/instagram-brands.svg'
 import IconLinkedin from '../assets/svg/icons/linkedin-in-brands.svg'
@@ -9,37 +9,47 @@ import IconFacebook from '../assets/svg/icons/facebook-brands.svg'
 ---
 
 <footer>
-    <Logo isotipo={false}/>
+    <div class="footer-logoWrapper">
+        <!-- <Logo fill="#ffffff"/> -->
+    </div>
     <div class="footer-socialmedia">
         <div class="footer-text-wrapper">
             <a href="mailto:contacto@westernbuilds.cl">contacto@westernbuilds.cl</a>
-            <a href="tel:+5698577931">+5698577931</a>
+            <a href="tel:+56931160698">+(56) 9 3116 0698</a>
         </div>
         <div class="footer-icon-wrapper">
-            <a href="http://"><IconInstagram class="footer-icon"/></a>
-            <a href="http://"><IconLinkedin class="footer-icon"/></a>
-            <a href="http://"><IconWhatsapp class="footer-icon"/></a>
-            <a href="http://"><IconX class="footer-icon"/></a>
-            <a href="http://"><IconFacebook class="footer-icon"/></a>
+            <a target="_blank" href="https://www.instagram.com/westernbuilds?igsh=MTFzMzQ3bmt5NmNkcA=="><IconInstagram class="footer-icon"/></a>
+            <a target="_blank" href="http://"><IconLinkedin class="footer-icon"/></a>
+            <a target="_blank" href="https://w.app/westernbuilds"><IconWhatsapp class="footer-icon"/></a>
+            <a target="_blank" href="https://x.com/westernbuilds"><IconX class="footer-icon"/></a>
+            <a target="_blank" href="http://"><IconFacebook class="footer-icon"/></a>
         </div>
     </div>
 </footer>
 
 <style>
+    * {
+        box-sizing: border-box;
+    }
     footer {
-        background: #051830;
+        background: #22215F;
+        
         width: 100%;
         height: auto;
         min-height: 10rem;
         padding: 0 3rem;
 
-        position: relative;
-        z-index: 3;
+        /* position: relative; */
+        /* z-index: 3; */
 
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+    }
+
+    .footer-logoWrapper {
+        width: 18rem;
     }
 
     .footer-socialmedia {
@@ -91,7 +101,8 @@ import IconFacebook from '../assets/svg/icons/facebook-brands.svg'
         }
         .footer-socialmedia {
             justify-content: center;
-            gap: 2rem;
+            gap: 1rem;
+            margin-top: .4rem;
         }
 
         .footer-text-wrapper {

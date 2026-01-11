@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import '../styles/global.css'
 
 import Layout from '../layouts/Layout.astro';
@@ -69,6 +70,82 @@ import Footer from '../components/Footer.astro'
 
 
   <section class="aboutus">
+=======
+import Layout from '../layouts/Layout.astro';
+import Btn from '../components/Btn.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+	<section class="hero">
+	<Header />
+    <div class="hero-text-container">
+		<div class="hero-flexWrapper">
+
+			<div class="hero-titleWrapper">
+				<h1>Construcción y Diseño Integral en Chile:</h1>
+			</div>
+			<div class="hero-servicesWrapper">
+				<h3>Casas, Oficinas, Movimiento de Tierras y Energía Solar.</h3>
+			</div>
+			<div class="hero-contentWrapper">
+
+				<div class="hero-sloganWrapper">
+					<p>NUESTROS PROYECTOS SUPERAN ESPECTATIVAS y LA SATISFACIÓN DE NUESTROS CLIENTES NOS RESPALDA.</p>
+				</div>
+				<div class="hero-questionWrapper">
+					<span>¿Tienes un proyecto en mente?</span>
+				</div>
+
+			</div>
+			<div class="hero-btnWrapper">
+        		<Btn content="Cotiza" />
+			</div>
+		</div>
+    </div>
+	</section>
+
+	<section class="services">
+		<h2>Nuestros Servicios</h2>
+
+		<div class="services-boxWrapper">
+
+			<div class="service-design services-service">
+				<div class="service-upperWrapper">
+					<h3>diseño y planificación</h3>
+					<span><?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"> <g transform="matrix(1,0,0,1,0,-1)"> <path d="M24,23L4,23C1.792,23 0,21.208 0,19L0,3.306C0.313,2.235 1.285,1 3,1C4.855,1 5.769,2.342 5.995,3.312L6,5L24,5L24,23ZM22,7L6,7L6,18C6,18 5.413,17 4.078,17C2.974,17 2,17.896 2,19C2,20.104 2.896,21 4,21L22,21L22,7ZM20,19L8,19L8,9L20,9L20,19ZM12,10L9,10L9,18L19,18L19,10L13,10L13,13L19,13L19,14L17,14L17,17L16,17L16,14L13,14L13,17L12,17L12,10Z"/> </g> </svg></span>
+				</div>
+				<p>Planos interiores y exteriores / Control de costos y plazos / Coordinación de equipos.</p>
+			</div>
+			<div class="service-remodeling services-service">
+				<div class="service-upperWrapper">
+					<h3>Remodelación y renovación</h3>
+					<span><?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"> <path d="M7.163,14.762L6.846,14.275C6.484,13.72 7.323,13.175 7.684,13.729L8.005,14.223L9.696,13.141L5.05,10.531L5.471,15.844L7.163,14.762ZM11.119,20.028C10.547,20.395 9.888,20.138 9.604,19.695L8.154,17.427C7.921,17.064 7.94,16.62 8.149,16.275L7.709,15.6L5.308,17.135C4.992,17.338 4.57,17.13 4.539,16.753L3.979,9.676C3.947,9.28 4.371,9.005 4.723,9.2L10.913,12.678C11.241,12.862 11.255,13.331 10.937,13.535L8.551,15.061L9.007,15.759C9.392,15.734 9.779,15.898 10.001,16.245L11.452,18.513C11.819,19.086 11.56,19.745 11.119,20.028ZM15.525,13.88C12.912,12.466 12.447,10.422 12.073,8.78C11.634,6.851 11.344,5.576 7.685,5.236C4.735,4.964 2.975,4.701 1,3.259L1,22L17.676,22C18.324,19.577 18.538,15.509 15.525,13.88ZM17,12L24,12L24,17L18.858,17C18.93,17.33 18.98,17.664 19.013,18L20,18L20,23L0,23L0,1L7,1L7,4.168L8,4.266L8,1L15.5,1L15.5,5L10.817,5C11.364,5.281 11.764,5.618 12.06,6L20,6L20,11L13.877,11C14.074,11.346 14.323,11.681 14.641,12L16,12L16,13C16.378,13.205 16.703,13.448 17,13.707L17,12ZM21,11L24,11L24,6L21,6L21,11ZM17,5L24,5L24,1L17,1L17,5ZM21,18L24,18L24,23L21,23L21,18Z"/> </svg></span>
+				</div>
+				<p>modificaciones estructurales / interiores y exteriores / espacios interiores y exteriores.</p>
+			</div>
+			<div class="service-construction services-service">
+				<div class="service-upperWrapper">
+					<h3>construcción integral</h3>
+					<span><?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"> <g transform="matrix(1,0,0,1,0,-0.295239)"> <path d="M17.059,17.926L13.064,13.608C11.997,12.54 13.024,11.346 15.604,11.088C15.604,11.088 14.176,10.385 12.585,10.385C11.777,10.385 10.928,10.566 10.201,11.113C8.977,12.034 9.228,12.771 8.676,13.323C8.169,13.83 7.562,13.397 7.562,13.397L6.687,14.272L9.161,16.745L10.035,15.87C10.035,15.87 9.674,15.248 10.072,14.851C10.354,14.57 10.894,14.439 11.357,14.903C11.552,15.097 15.505,19.256 15.505,19.256C16.583,20.334 17.868,18.734 17.059,17.926ZM24,13.001L21,13.001L21,23.001L3,23.001L3,13.001L0,13.001L12,1L24,13.001ZM20,7.577L17,4.577L17,2.001L20,2.001L20,7.577Z"/> </g> </svg></span>
+				</div>
+				<p>Viviendas a medida / Estructuras / Oficinas / Locales / Canchas Deportivas / Movimientos de Tierra / Bodegas.</p>
+			</div>
+			<div class="service-installation services-service">
+				<div class="service-upperWrapper">
+					<h3>Instalaciones</h3>
+					<span><svg width="100%" height="100%" viewBox="0 0 87 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"> <g transform="matrix(1,0,0,1,-7,-6)"> <path d="M70,18C70,11.372 75.372,6 82,6C88.628,6 94,11.372 94,18C94,24.627 88.628,30 82,30C75.372,30 70,24.627 70,18Z" style="fill-rule:nonzero;"/> </g> <g transform="matrix(1.06316,0,0,1.10445,-12.3798,-10.253)"> <rect x="79.277" y="36.446" width="5.903" height="8.14"/> </g> <g transform="matrix(6.50997e-17,1.06316,-1.10445,6.76279e-17,97.4305,-75.4223)"> <rect x="79.277" y="36.446" width="5.903" height="8.14"/> </g> <g transform="matrix(0.766101,0.737153,-0.886376,0.921184,32.4682,-70.3681)"> <rect x="79.277" y="36.446" width="5.903" height="8.14"/> </g> <g transform="matrix(1,0,0,1,-7,-6)"> <path d="M76,63L46,63L46,87L40,87L40,61.242L16.325,37.567L7,50L7,93L91,93L91,87L76,87L76,63ZM33.103,69.012C33.854,69.012 20.055,86.784 20.055,86.784C19.695,87.212 22,74.999 22,74.999C22,74.999 15.35,75.246 13.885,75.005C13.358,74.918 27.992,57.059 27.992,57.619L25,68.999C28.78,69.015 26.959,69.012 33.103,69.012ZM67,87L55,87L55,75C55,73.343 56.343,72 58,72L64,72C65.657,72 67,73.343 67,75L67,87Z" style="fill-rule:nonzero;"/> </g> <g transform="matrix(1,0,0,1,-7,-6)"> <path d="M44.242,48L53.242,57C52.395,57 45.079,57 44.243,57.001L35.242,48L44.242,48Z" style="fill-rule:nonzero;"/> </g> <g transform="matrix(1,0,0,1,-7,-6)"> <path d="M62.242,48L71.242,57C70.395,57 63.079,57 62.243,57.001L53.242,48L62.242,48Z" style="fill-rule:nonzero;"/> </g> <g transform="matrix(1,0,0,1,-7,-6)"> <path d="M29.239,42L23.242,36L32.758,36L38.758,42L29.239,42Z" style="fill-rule:nonzero;"/> </g> <g transform="matrix(1,0,0,1,-7,-6)"> <path d="M47.242,42L41.242,36L48.999,36C49.795,36 50.558,36.316 51.121,36.879L56.242,42L47.242,42Z" style="fill-rule:nonzero;"/> </g> </svg></span>
+				</div>
+				<p>paneles solares (fotovoltaicos) / iluminación interior y exterior.</p>
+			</div>
+
+		</div>
+
+  	</section>
+
+	<section class="aboutus">
+>>>>>>> re-structure
      <article>
       <h2>Sobre Nosotros</h2>
       <p>En WESTERN BUILDS, la vasta experiencia de nuestros ingenieros, con más de tres décadas en obras civiles, fundamenta nuestra solidez. Su profundo conocimiento abarca desde la planificación de infraestructuras vitales hasta la edificación de espacios diversos, garantizando soluciones eficientes y de alta calidad.</p>
@@ -82,6 +159,7 @@ import Footer from '../components/Footer.astro'
   <section class="contact">
     <h3>listos para empezar?</h3>
     <p>Todo proyecto se empieza con una conversación.</p>
+<<<<<<< HEAD
     <Btn to="mailto:contacto@westernbuilds.cl" content="cotizar"/>
   </section>
 
@@ -124,10 +202,116 @@ import Footer from '../components/Footer.astro'
     justify-content: center;
     place-items: center;
   }
+=======
+    <Btn to="mailto:contacto@westernbuilds.cl" content="cotizar" width={120}/>
+  </section>
+
+  <Footer />
+
+</Layout>
+
+<style>
+	* {
+		box-sizing: border-box;
+	}
+	
+/* #region Hero section */
+.hero {
+	width: 100%;
+	height: 100vh;
+	min-height: 700px;
+
+	background-image: url(../../public/images/image.webp);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position-x: right;
+	display: flex;
+}
+
+.hero-text-container {
+	width: 100%;
+    background-color: #FFFFFF;
+	padding-left: 5rem;
+	padding-bottom: 5rem;
+	display: flex;
+	align-items: center;
+	
+	
+
+    clip-path: polygon(0 0, 90% 0, 0 200%); /* Forma irregular */
+}
+	.hero-flexWrapper {
+		flex-grow: 0;
+		flex-shrink: 1;
+	}
+
+	.hero-titleWrapper {
+		width: 65%;
+		/* border: solid; */
+		margin-top: 1rem;
+	}
+		.hero-titleWrapper h1 {
+			font-size: clamp(2rem, 4vw, 5vw);
+			text-transform: uppercase;
+			margin: 0;
+		}
+
+	.hero-servicesWrapper {
+		width: 65%;
+		height: min-content;
+		/* border: solid; */
+		margin-top: .2rem;
+	}
+		.hero-servicesWrapper h3 {
+			font-size: clamp(1.1rem, 1.85vw, 3vw);
+			text-transform: uppercase;
+			color: #22215F;
+			margin: 0;
+		}
+	.hero-contentWrapper {
+		margin-top: clamp(1rem, 2rem, 3rem );
+		margin-bottom: 2rem;
+		display: flex;
+	}
+		.hero-sloganWrapper {
+			width: 30%;
+			margin-right: 1rem;
+		}
+			.hero-sloganWrapper p {
+				text-transform: uppercase;
+				font-weight: bold;	
+
+				font-size: clamp(1rem, 1.3vw, 2vw);
+				margin: 0;
+			}
+		.hero-questionWrapper {
+			width: 30%;
+			/* border: solid; */
+		}
+			.hero-questionWrapper span {
+				font-size: clamp(1.4rem, 1.9vw, 3vw);
+				text-transform: uppercase;
+				font-weight: bolder;
+				margin: 0;
+			}
+
+/* #endregion */
+
+/* #region Services section*/
+.services {
+    width: 100%;
+    height: auto;
+    padding: 0rem 3rem;
+    background: #ffffff;
+    position: relative;
+    z-index: 3;
+}
+>>>>>>> re-structure
 
   .services > h2 {
     font-size: 2rem;
     text-transform: uppercase;
+<<<<<<< HEAD
     grid-column: 1 / -1;
     align-self: self-start;
     justify-self: start;
@@ -141,6 +325,26 @@ import Footer from '../components/Footer.astro'
     padding: 1.5rem;
     background: #ffffff;
     border: solid 3px #e9e9e9;
+=======
+  }
+
+  .services-boxWrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 1rem;
+  }
+
+  .services-service {
+    color:rgb(0, 0, 0);
+    width: 100%;
+
+
+    padding: 1.5rem;
+    background: #ffffff;
+    border: solid 3px #0000001e;
+>>>>>>> re-structure
 
     display: flex;
     justify-content: space-between;
@@ -148,6 +352,16 @@ import Footer from '../components/Footer.astro'
     flex-wrap: wrap;
 
   }
+<<<<<<< HEAD
+=======
+
+  .service-upperWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+
+>>>>>>> re-structure
   .services h3 {
     text-transform: uppercase;
     font-size: 150%;
@@ -156,6 +370,7 @@ import Footer from '../components/Footer.astro'
   .services p {
     text-transform: capitalize;
     font-size: .77rem;
+<<<<<<< HEAD
     font-style: SemiBold;
 
   }
@@ -224,12 +439,46 @@ import Footer from '../components/Footer.astro'
   }
 
   .aboutus {
+=======
+	font-weight: 600;
+  }
+  .services-service span {
+	width: 2.3rem;
+	height: 2.3rem;
+	margin-left: 1rem;
+  }
+
+  .services-boxWrapper .service-remodeling {
+    grid-column: 2 / -1;
+  }
+  .services-boxWrapper .service-design {
+    grid-column: 1 / 2;
+  }
+  .services-boxWrapper .service-installation {
+    grid-column: 3 / -1;
+  }
+  .services-boxWrapper .service-construction {
+    grid-column: 1 / 3;
+  }
+
+/* #endregion */
+
+/* #region About Us section*/
+.aboutus {
+>>>>>>> re-structure
     width: 100%;
     height: auto;
     position: relative;
     z-index: 3;
+<<<<<<< HEAD
     background-image: url('../../public/img/Las_Galias-22 1.jpg');
     padding: 2.3rem 3rem;
+=======
+    background-image: url('../../public/images/Las_Galias-22 1.jpg');
+    padding: 2.3rem 3rem;
+	margin-top: 3.5rem;
+
+>>>>>>> re-structure
     display: flex;
     justify-content: end;
     flex-wrap: wrap;
@@ -247,10 +496,18 @@ import Footer from '../components/Footer.astro'
   }
   .aboutus article p {
     color: #7a7a7a;
+<<<<<<< HEAD
+=======
+	font-weight: 500;
+>>>>>>> re-structure
   }
 
 .aboutus article .wrapper {
   width: 100%;
+<<<<<<< HEAD
+=======
+
+>>>>>>> re-structure
   display: flex;
   flex-wrap: wrap;
   gap: .8rem;
@@ -258,6 +515,7 @@ import Footer from '../components/Footer.astro'
 }
 
 .aboutus article .wrapper div {
+<<<<<<< HEAD
   flex-grow: 1;
   border: solid #e9e9e9;
   height: 8rem;
@@ -267,10 +525,27 @@ import Footer from '../components/Footer.astro'
   align-items: center;
   padding: 1rem 0;
   flex-wrap: wrap;
+=======
+  border: solid #0000001e;
+  height: 8rem;
+  padding: 1rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+>>>>>>> re-structure
 }
 .aboutus article .wrapper div span.big {
   font-size: 1.8rem;
   font-weight: 900;
+<<<<<<< HEAD
+=======
+  margin: 0;
+  padding: 0;
+>>>>>>> re-structure
 }
 
 .aboutus article .wrapper .exp span.big {
@@ -282,9 +557,17 @@ import Footer from '../components/Footer.astro'
   font-size: auto;
 }
 
+<<<<<<< HEAD
 
 
   .contact {
+=======
+/* #endregion */
+
+/* #region Contact section */
+
+.contact {
+>>>>>>> re-structure
     position: relative;
     z-index: 3;
 
@@ -299,21 +582,175 @@ import Footer from '../components/Footer.astro'
   .contact h3 {
     font-size: 2rem;
     text-transform: uppercase;
+<<<<<<< HEAD
+=======
+	margin: 0;
+>>>>>>> re-structure
   }
   .contact p {
     color: #7a7a7a;
     margin-bottom: 1rem;
+<<<<<<< HEAD
   }
 
   @media only screen and (max-width: 680px) {
     .services {
+=======
+	font-size: 1.2rem;
+  }
+
+
+/* #endregion */
+
+
+/* #region Responsive Desing */
+
+  	@media only screen and (max-width: 1200px) {
+		.aboutus article {
+			width: 50%;
+		}
+	}
+
+	@media only screen and (max-width: 900px) {
+		.aboutus article {
+			width: 70%;
+		}
+	}
+
+  	@media only screen and (max-width: 760px) {
+		
+	/* #region Responsive Hero section */
+
+		.hero {
+			width: 100%;
+			height: 100vh;
+			padding: 0;
+
+			background-repeat: no-repeat;
+			background-position-x: right;
+			display: flex;
+			justify-content: center;
+
+		}
+
+		.hero-text-container {
+			width: 100%;
+
+			background-image: url(../../public/images/image.webp);
+			backdrop-filter: blur(100px);
+			background-size: auto 140%;
+			background-repeat: no-repeat;
+			background-position-x: right;
+			background-position-y: 50%;
+
+			padding: 0 1rem;
+			
+			display: flex;
+			align-items: center;
+			clip-path: none; /* Forma irregular */
+			box-sizing: border-box;
+		}
+		 
+		.hero-flexWrapper {
+			height: 85%;
+			/* padding-top: 2rem; */
+			
+			flex-grow: 0;
+			flex-shrink: 1;
+			display: grid;
+			grid-template-rows: repeat(2, 3fr) repeat(5, 1fr);
+			grid-row: 3 / 4;
+
+			justify-content: center;
+		}
+
+		.hero-titleWrapper {
+			width: 100%;
+			margin-top: 1rem;
+			grid-row: 3 / 4;
+			margin-bottom: 1.3rem;
+		}
+			.hero-titleWrapper h1 {
+				font-size: clamp(1.6rem, 6.2vw, 7vw);
+				text-align: center;
+				text-transform: uppercase;
+				margin: 0;
+				color: #FFFFFF;
+			}
+
+		.hero-servicesWrapper {
+			width: 100%;
+			height: min-content;
+			margin-top: .2rem;
+			margin-bottom: 1rem;
+			grid-row: 4 / 5;
+		}
+			.hero-servicesWrapper h3 {
+				font-size: clamp(1.1rem, 3vw, 4vw);
+				text-transform: uppercase;
+				text-align: center;
+				color: #ffffffb4;
+				margin: 0;
+			}
+		.hero-contentWrapper {
+			margin-top: clamp(1rem, 2rem, 3rem );
+			margin-bottom: 2rem;
+			display: flex;
+			justify-content: center;
+
+			grid-row: 1 / 2;
+		}
+			.hero-sloganWrapper {
+				display: none;
+			}
+
+			.hero-questionWrapper {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #464449;
+			}
+				.hero-questionWrapper span {
+					font-size: clamp(1.6rem, 1.9vw, 3vw);
+					text-transform: uppercase;
+					text-align: center;
+					font-weight: bolder;
+					margin: 0;
+					
+				}
+		.hero-flexWrapper .hero-btnWrapper {
+			display: flex;
+			justify-content: center;
+			grid-row: 5 / 6;
+		}
+
+
+	/* #endregion */
+
+
+	/* #region Responsive Services section */
+
+	.services {
+>>>>>>> re-structure
       display: grid;
       font-size: 1rem;
       padding: 1.5rem;
     }
+<<<<<<< HEAD
     .services > h2 {
       margin-top: 2rem;
       font-size: 7vw;
+=======
+
+	.services-service {
+		justify-content: star;
+	}
+	
+    .services > h2 {
+      margin-top: 2rem;
+      font-size: clamp(1rem,5.5vw, 6vw);
+>>>>>>> re-structure
     }
     .services > div {
       width: 100%;
@@ -321,6 +758,7 @@ import Footer from '../components/Footer.astro'
       text-align: center;
     }
     .services > div h3 {
+<<<<<<< HEAD
       font-size: 5vw;
       margin-bottom: 1.7rem;
       text-align: center;
@@ -387,3 +825,78 @@ import Footer from '../components/Footer.astro'
 
 
 </style>
+=======
+      font-size: clamp(1rem, 5vw, 6vw);
+      margin-bottom: 1.7rem;
+      text-align: left;
+    }
+    .services > div p {
+      font-size: clamp(1rem, 4vw, 5vw);
+    }
+
+	.services-boxWrapper .service-remodeling {
+		grid-column: 1 / -1;
+	}
+	.services-boxWrapper .service-design {
+		grid-column: 1 / -1;
+	}
+	.services-boxWrapper .service-installation {
+		grid-column: 1 / -1;
+	}
+	.services-boxWrapper .service-construction {
+		grid-column: 1 / -1;
+	}
+
+
+	/* #endregion */
+
+
+	/* #region Responsive About Us section */
+
+	.aboutus {
+		padding: 2rem .5rem;
+		justify-content: center;
+	}
+	.aboutus article {
+		width: 98%;
+	}
+	.aboutus article h2 {
+		text-align: center;
+	}
+	.aboutus article p {
+		text-align: center;
+		font-weight: 500;
+
+		font-size: clamp(1.1rem, 3vw, 4vw);
+	}
+
+	/* #endregion */
+
+
+	/* #region Responsive Contact section */
+
+	.contact {
+		padding: 2rem;
+		min-height: 17rem;
+		justify-content: space-around;
+
+	}
+
+	.contact h3 {
+		font-size: clamp(1.3rem, 5vw, 6vw);
+		margin: 0;
+	}
+	.contact p {
+		font-size: clamp(1.3rem, 3.4vw, 4vw);
+		text-align: center;
+		margin: 0;
+	}
+
+	/* #endregion */
+
+	}
+
+/* #endregion */
+
+</style>
+>>>>>>> re-structure

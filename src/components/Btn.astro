@@ -1,19 +1,48 @@
 ---
+<<<<<<< HEAD
 const {content, classs, to} = Astro.props
 
 ---
 
 <a href={to} class={`btn ${classs}`}>
+=======
+interface Props {
+  width?: number; // Por ejemplo: "100px", "50%", "10rem"
+  to?: string;  // Por ejemplo: "100px", "auto", "20vh"
+  content?: string; // Opcional: para darle un color y sea más visual
+}
+
+const { 
+  width = 180, // Ancho por defecto
+  to = '#', // Color por defecto
+  content = 'Btn ejemplo' // Texto por defecto
+} = Astro.props;
+---
+
+<a href={to} class={`btn`} style={{ 
+    // Aquí definimos las variables CSS usando las props
+    '--width-btn': width + "px",
+    '--height-btn': width/3 + "px",
+    '--font-size': (width*0.1155) + "px"
+  }}>
+>>>>>>> re-structure
   <span class="btn-text-one">{content}</span>
   <span class="btn-text-two">{content}</span>
 </a>
 
 <style>
 .btn {
+<<<<<<< HEAD
   width: 120px;
   height: 40px;
   color: #000;
   background: #fff;
+=======
+  width: var(--width-btn);
+  height: var(--height-btn);
+  color: #ffffff;
+  background: #040404;
+>>>>>>> re-structure
   outline: none;
   cursor: pointer;
   position: relative;
@@ -23,7 +52,11 @@ const {content, classs, to} = Astro.props
 }
 
 .btn span {
+<<<<<<< HEAD
   font-size: 1rem;
+=======
+  font-size: var(--font-size);
+>>>>>>> re-structure
   font-family: "Poppins";
   font-weight: 700;
   text-transform: uppercase;

@@ -1,76 +1,4 @@
 ---
-<<<<<<< HEAD
-import '../styles/global.css'
-
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import Btn from '../components/Btn.astro';
-import Footer from '../components/Footer.astro'
-
-
-
----
-
-<Layout>
-  <section class="head">
-    <Header sidebar={false}/>
-    <Hero/>
-  </section>
-
-<section class="services">
-    <h2>Nuestros Servicios</h2>
-    <div class="service-design">
-      <h3>diseño y planificación</h3>
-      <p>Planos interiores y exteriores / Control de costos y plazos / Coordinación de equipos. </p>
-    </div>
-    <div class="service-remodeling">
-      <h3>Remodelación y renovación</h3>
-      <p>modificaciones estructurales / interiores y exteriores / espacios interiores y exteriores.</p>
-    </div>
-    <div class="service-construction">
-      <h3>construcción integral</h3>
-      <p>Viviendas a medida / Estructuras / Oficinas / Locales / Canchas Deportivas / Movimiento de Tierra / Bodegas.</p>
-    </div>
-
-    <div class="service-installation">
-      <h3>Instalaciones</h3>
-      <p>paneles solares fotovoltaicos / iluminación interior y exterior</p>
-    </div>
-  </section>
-
-  <section class="projects">
-    <h2>proyectos</h2>
-    <div class="projects-wrapper">
-    <div class="project-item">
-      <div class="img">
-        <img src="" alt="">
-      </div>
-      <h3>public space</h3>
-      <p>hospitals/Clinics museums administration</p>
-    </div>
-    <div class="project-item">
-      <div class="img">
-        <img src="" alt="">
-      </div>
-      <h3>public space</h3>
-      <p>hospitals/Clinics museums administration</p>
-    </div>
-    
-<div class="project-item">
-      <div class="img">
-        <img src="" alt="">
-      </div>
-      <h3>public space</h3>
-      <p>hospitals/Clinics museums administration</p>
-    </div>
-    </div>
-
-  </section>
-
-
-  <section class="aboutus">
-=======
 import Layout from '../layouts/Layout.astro';
 import Btn from '../components/Btn.astro'
 import Header from '../components/Header.astro'
@@ -145,7 +73,6 @@ import Footer from '../components/Footer.astro';
   	</section>
 
 	<section class="aboutus">
->>>>>>> re-structure
      <article>
       <h2>Sobre Nosotros</h2>
       <p>En WESTERN BUILDS, la vasta experiencia de nuestros ingenieros, con más de tres décadas en obras civiles, fundamenta nuestra solidez. Su profundo conocimiento abarca desde la planificación de infraestructuras vitales hasta la edificación de espacios diversos, garantizando soluciones eficientes y de alta calidad.</p>
@@ -159,50 +86,6 @@ import Footer from '../components/Footer.astro';
   <section class="contact">
     <h3>listos para empezar?</h3>
     <p>Todo proyecto se empieza con una conversación.</p>
-<<<<<<< HEAD
-    <Btn to="mailto:contacto@westernbuilds.cl" content="cotizar"/>
-  </section>
-
-  <Footer/>
-</Layout>
-
-<style>
-
-  :root {
-    --color-filter-hero: hsla(0, 0%, 0%, 0.5);
-    --color-filter-cards: rgba(0, 0, 0, 0.596);
-    --filter-cards: linear-gradient(var(--color-filter-cards), var(--color-filter-cards));
-    --filter-hero: linear-gradient(var(--color-filter-hero), var(--color-filter-hero));
-  }
-
-  .head {
-    width: 100%;
-    height: 100vh;
-    background: var(--filter-hero), url("../../public/img/wood-construction.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: auto;
-  }
-
-
-  .services {
-    width: 100%;
-    height: auto;
-    padding: 3rem 3rem;
-    background: #ffffff;
-    position: relative;
-    z-index: 3;
-
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: .5fr repeat(2, 1fr);
-    gap: 1rem;
-    justify-content: center;
-    place-items: center;
-  }
-=======
     <Btn to="mailto:contacto@westernbuilds.cl" content="cotizar" width={120}/>
   </section>
 
@@ -306,26 +189,10 @@ import Footer from '../components/Footer.astro';
     position: relative;
     z-index: 3;
 }
->>>>>>> re-structure
 
   .services > h2 {
     font-size: 2rem;
     text-transform: uppercase;
-<<<<<<< HEAD
-    grid-column: 1 / -1;
-    align-self: self-start;
-    justify-self: start;
-    flex-grow: 1;
-  }
-
-  .services div {
-    color:rgb(0, 0, 0);
-    height: 100%;
-    width: 100%;
-    padding: 1.5rem;
-    background: #ffffff;
-    border: solid 3px #e9e9e9;
-=======
   }
 
   .services-boxWrapper {
@@ -344,7 +211,6 @@ import Footer from '../components/Footer.astro';
     padding: 1.5rem;
     background: #ffffff;
     border: solid 3px #0000001e;
->>>>>>> re-structure
 
     display: flex;
     justify-content: space-between;
@@ -352,8 +218,6 @@ import Footer from '../components/Footer.astro';
     flex-wrap: wrap;
 
   }
-<<<<<<< HEAD
-=======
 
   .service-upperWrapper {
 	display: flex;
@@ -361,7 +225,6 @@ import Footer from '../components/Footer.astro';
 	align-items: center;
   }
 
->>>>>>> re-structure
   .services h3 {
     text-transform: uppercase;
     font-size: 150%;
@@ -370,76 +233,6 @@ import Footer from '../components/Footer.astro';
   .services p {
     text-transform: capitalize;
     font-size: .77rem;
-<<<<<<< HEAD
-    font-style: SemiBold;
-
-  }
-  .services .service-remodeling {
-    grid-column: 2 / -1;
-  }
-  .services .service-design {
-    grid-column: 1 / 2;
-  }
-  .services .service-installation {
-    grid-column: 3 / -1;
-  }
-  .services .service-construction {
-    grid-column: 1 / 3;
-  }
-
-
-  .projects {
-    width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
-
-    position: relative;
-    z-index: 3;
-
-    padding: 3rem;
-  }
-  .projects > h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
-
-  }
-  .projects-wrapper{
-    width: auto;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-
-    flex-grow: 1;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .projects-wrapper .project-item {
-    width: 32%;
-    min-width: 17rem;
-    height: 20rem;
-
-    flex-grow: 1;
-  }
-  .projects-wrapper .project-item .img {
-    width: 100%;
-    height: 75%;
-    background: #7a7a7a;
-  }
-
-  .projects-wrapper .project-item h3 {
-    text-transform: uppercase;
-    margin-top: .4rem;
-    font-size: 1.2rem;
-  }
-
-  .projects-wrapper .project-item p {
-    color: #7a7a7a;
-  }
-
-  .aboutus {
-=======
 	font-weight: 600;
   }
   .services-service span {
@@ -465,20 +258,14 @@ import Footer from '../components/Footer.astro';
 
 /* #region About Us section*/
 .aboutus {
->>>>>>> re-structure
     width: 100%;
     height: auto;
     position: relative;
     z-index: 3;
-<<<<<<< HEAD
-    background-image: url('../../public/img/Las_Galias-22 1.jpg');
-    padding: 2.3rem 3rem;
-=======
     background-image: url('../../public/images/Las_Galias-22 1.jpg');
     padding: 2.3rem 3rem;
 	margin-top: 3.5rem;
 
->>>>>>> re-structure
     display: flex;
     justify-content: end;
     flex-wrap: wrap;
@@ -496,18 +283,11 @@ import Footer from '../components/Footer.astro';
   }
   .aboutus article p {
     color: #7a7a7a;
-<<<<<<< HEAD
-=======
 	font-weight: 500;
->>>>>>> re-structure
   }
 
 .aboutus article .wrapper {
   width: 100%;
-<<<<<<< HEAD
-=======
-
->>>>>>> re-structure
   display: flex;
   flex-wrap: wrap;
   gap: .8rem;
@@ -515,17 +295,6 @@ import Footer from '../components/Footer.astro';
 }
 
 .aboutus article .wrapper div {
-<<<<<<< HEAD
-  flex-grow: 1;
-  border: solid #e9e9e9;
-  height: 8rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-  flex-wrap: wrap;
-=======
   border: solid #0000001e;
   height: 8rem;
   padding: 1rem 0;
@@ -536,16 +305,12 @@ import Footer from '../components/Footer.astro';
   align-items: center;
   flex-wrap: wrap;
   flex-grow: 1;
->>>>>>> re-structure
 }
 .aboutus article .wrapper div span.big {
   font-size: 1.8rem;
   font-weight: 900;
-<<<<<<< HEAD
-=======
   margin: 0;
   padding: 0;
->>>>>>> re-structure
 }
 
 .aboutus article .wrapper .exp span.big {
@@ -557,17 +322,11 @@ import Footer from '../components/Footer.astro';
   font-size: auto;
 }
 
-<<<<<<< HEAD
-
-
-  .contact {
-=======
 /* #endregion */
 
 /* #region Contact section */
 
 .contact {
->>>>>>> re-structure
     position: relative;
     z-index: 3;
 
@@ -582,20 +341,11 @@ import Footer from '../components/Footer.astro';
   .contact h3 {
     font-size: 2rem;
     text-transform: uppercase;
-<<<<<<< HEAD
-=======
 	margin: 0;
->>>>>>> re-structure
   }
   .contact p {
     color: #7a7a7a;
     margin-bottom: 1rem;
-<<<<<<< HEAD
-  }
-
-  @media only screen and (max-width: 680px) {
-    .services {
-=======
 	font-size: 1.2rem;
   }
 
@@ -732,16 +482,10 @@ import Footer from '../components/Footer.astro';
 	/* #region Responsive Services section */
 
 	.services {
->>>>>>> re-structure
       display: grid;
       font-size: 1rem;
       padding: 1.5rem;
     }
-<<<<<<< HEAD
-    .services > h2 {
-      margin-top: 2rem;
-      font-size: 7vw;
-=======
 
 	.services-service {
 		justify-content: star;
@@ -750,7 +494,6 @@ import Footer from '../components/Footer.astro';
     .services > h2 {
       margin-top: 2rem;
       font-size: clamp(1rem,5.5vw, 6vw);
->>>>>>> re-structure
     }
     .services > div {
       width: 100%;
@@ -758,74 +501,6 @@ import Footer from '../components/Footer.astro';
       text-align: center;
     }
     .services > div h3 {
-<<<<<<< HEAD
-      font-size: 5vw;
-      margin-bottom: 1.7rem;
-      text-align: center;
-    }
-    .services > div p {
-      font-size: 4vw;
-    }
-  .services .service-remodeling {
-    grid-column: 1 / -1;
-  }
-  .services .service-design {
-    grid-column: 1 / -1;
-  }
-  .services .service-installation {
-    grid-column: 1 / -1;
-  }
-  .services .service-construction {
-    grid-column: 1 / -1;
-  }
-
-  .projects {
-    padding: 1.5rem;
-  }
-  .projects > h2 {
-    font-size: 7vw;
-  }
-   .projects-wrapper .project-item p {
-    font-size: 4vw;
-  }
-
-  .aboutus {
-    padding: 2rem .5rem;
-    justify-content: center;
-  }
-
-  .contact h3 {
-    font-size: 7.5vw;
-  }
-  .contact p {
-    font-size: 4.5vw;
-    text-align: center;
-  }
-
-  }
-
-@media only screen and (max-width: 1200px) {
-  .aboutus article {
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .aboutus article {
-    width: 70%;
-  }
-}
-
-
-@media only screen and (max-width: 700px) {
-  .aboutus article {
-    width: 98%;
-  }
-}
-
-
-</style>
-=======
       font-size: clamp(1rem, 5vw, 6vw);
       margin-bottom: 1.7rem;
       text-align: left;
@@ -899,4 +574,3 @@ import Footer from '../components/Footer.astro';
 /* #endregion */
 
 </style>
->>>>>>> re-structure

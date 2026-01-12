@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// @ts-check
-import { defineConfig } from 'astro/config';
-
-// https://astro.build/config
-export default defineConfig({});
-=======
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
 
@@ -14,4 +7,3 @@ export default defineConfig({
     // port: 4321, // Opcional: especificar un puerto diferente
   },
 });
->>>>>>> re-structure
